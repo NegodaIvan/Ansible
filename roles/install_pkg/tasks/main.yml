@@ -1,0 +1,33 @@
+---
+# tasks file for install_pkg
+  - name: Update apt
+    apt: update_cache=yes
+    #    when: ansible_os_family == "Debian"
+    tags: install
+
+  - name: install web server
+    apt:
+     name: nginx=1.14.0-0ubuntu1.7*
+     state: present
+     update_cache: yes
+     #when: ansible_os_family == "Debian"
+    tags: install
+    notify:
+         - NGINX_start
+
+  - name: install letscrypt
+    apt:
+     name: letsencrypt
+     state: present
+     update_cache: yes
+    tags: install
+    #when: ansible_os_family == "Debian"
+
+  - name: install mc
+    apt:
+     name: mc
+     state: present
+     update_cache: yes
+    tags: install
+    #when: ansible_os_family == "Debian"
+

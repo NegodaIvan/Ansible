@@ -1,0 +1,5 @@
+---
+# handlers file for add_virthost_file
+- name: NGINX_reload
+  service: name=nginx state=reloaded
+

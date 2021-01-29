@@ -1,0 +1,5 @@
+---
+# handlers file for install_pkg
+- name: NGINX_start
+  service: name=nginx state=started enabled=yes
+

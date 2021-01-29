@@ -1,0 +1,5 @@
+---
+# vars file for add_virthost_file
+default_directory: /var/www/html
+server_name: negoda.net
+virt_host: virthost

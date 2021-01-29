@@ -1,0 +1,7 @@
+---
+# vars file for create_TLS_key
+
+default_directory: /var/www/html
+server_name: negoda.net
+email: ***************
+
